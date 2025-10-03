@@ -1,0 +1,84 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dbeafe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="groundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a3a3a3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#525252;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="600" height="300" fill="url(#skyGradient)"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="300" width="600" height="100" fill="url(#groundGradient)"/>
+  
+  <!-- Mountains/Hills in background -->
+  <polygon points="0,250 100,200 200,220 300,180 400,200 500,160 600,180 600,300 0,300" fill="#94a3b8"/>
+  
+  <!-- Construction site elements -->
+  <!-- Crane -->
+  <rect x="450" y="100" width="8" height="200" fill="#374151"/>
+  <rect x="420" y="100" width="80" height="6" fill="#374151"/>
+  <rect x="440" y="95" width="20" height="15" fill="#fbbf24"/>
+  
+  <!-- Building under construction -->
+  <rect x="300" y="200" width="100" height="100" fill="#e5e7eb"/>
+  <rect x="310" y="210" width="15" height="15" fill="#60a5fa"/>
+  <rect x="330" y="210" width="15" height="15" fill="#60a5fa"/>
+  <rect x="350" y="210" width="15" height="15" fill="#60a5fa"/>
+  <rect x="370" y="210" width="15" height="15" fill="#60a5fa"/>
+  
+  <!-- JCB Excavator -->
+  <g transform="translate(150, 250)">
+    <!-- Body -->
+    <rect x="0" y="20" width="80" height="35" rx="4" fill="#fbbf24"/>
+    <!-- Cabin -->
+    <rect x="30" y="0" width="30" height="20" rx="3" fill="#1f2937"/>
+    <rect x="32" y="2" width="26" height="16" rx="2" fill="#60a5fa"/>
+    <!-- Arm -->
+    <rect x="70" y="10" width="40" height="6" rx="3" fill="#374151"/>
+    <rect x="105" y="5" width="25" height="4" rx="2" fill="#374151"/>
+    <!-- Bucket -->
+    <path d="M 125 5 L 140 5 L 142 15 L 120 15 Z" fill="#6b7280"/>
+    <!-- Tracks -->
+    <rect x="5" y="50" width="70" height="12" rx="6" fill="#1f2937"/>
+    <circle cx="15" cy="56" r="6" fill="#374151"/>
+    <circle cx="65" cy="56" r="6" fill="#374151"/>
+  </g>
+  
+  <!-- Dump truck -->
+  <g transform="translate(50, 260)">
+    <!-- Truck body -->
+    <rect x="0" y="15" width="60" height="25" rx="3" fill="#dc2626"/>
+    <!-- Cabin -->
+    <rect x="0" y="0" width="25" height="15" rx="2" fill="#1f2937"/>
+    <rect x="2" y="2" width="21" height="11" rx="1" fill="#60a5fa"/>
+    <!-- Dump bed -->
+    <rect x="25" y="10" width="35" height="20" fill="#6b7280"/>
+    <!-- Wheels -->
+    <circle cx="15" cy="45" r="8" fill="#1f2937"/>
+    <circle cx="50" cy="45" r="8" fill="#1f2937"/>
+  </g>
+  
+  <!-- Construction materials -->
+  <rect x="200" y="280" width="30" height="20" fill="#a3a3a3"/>
+  <rect x="240" y="285" width="25" height="15" fill="#a3a3a3"/>
+  
+  <!-- Safety cones -->
+  <polygon points="380,290 385,280 390,290" fill="#f97316"/>
+  <polygon points="420,285 425,275 430,285" fill="#f97316"/>
+  
+  <!-- Clouds -->
+  <circle cx="100" cy="80" r="20" fill="white" opacity="0.8"/>
+  <circle cx="120" cy="80" r="25" fill="white" opacity="0.8"/>
+  <circle cx="140" cy="80" r="20" fill="white" opacity="0.8"/>
+  
+  <circle cx="450" cy="60" r="15" fill="white" opacity="0.8"/>
+  <circle cx="465" cy="60" r="20" fill="white" opacity="0.8"/>
+  <circle cx="480" cy="60" r="15" fill="white" opacity="0.8"/>
+</svg>

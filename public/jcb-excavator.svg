@@ -1,0 +1,45 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="250" width="400" height="50" fill="#8b5a2b"/>
+  
+  <!-- JCB Body -->
+  <rect x="120" y="180" width="160" height="70" rx="8" fill="#fbbf24"/>
+  <rect x="125" y="185" width="150" height="60" rx="5" fill="#f59e0b"/>
+  
+  <!-- Cabin -->
+  <rect x="180" y="140" width="60" height="40" rx="5" fill="#1f2937"/>
+  <rect x="185" y="145" width="50" height="30" rx="3" fill="#60a5fa"/>
+  
+  <!-- Front Loader Arm -->
+  <rect x="80" y="160" width="50" height="12" rx="6" fill="#374151"/>
+  <rect x="60" y="150" width="30" height="8" rx="4" fill="#374151"/>
+  
+  <!-- Front Bucket -->
+  <path d="M 40 150 L 70 150 L 75 170 L 35 170 Z" fill="#6b7280"/>
+  <rect x="35" y="165" width="40" height="8" fill="#4b5563"/>
+  
+  <!-- Rear Excavator Arm -->
+  <rect x="270" y="120" width="60" height="10" rx="5" fill="#374151"/>
+  <rect x="320" y="100" width="40" height="8" rx="4" fill="#374151"/>
+  
+  <!-- Excavator Bucket -->
+  <path d="M 350 100 L 380 100 L 385 120 L 345 120 Z" fill="#6b7280"/>
+  <rect x="345" y="115" width="40" height="8" fill="#4b5563"/>
+  
+  <!-- Wheels -->
+  <circle cx="140" cy="240" r="20" fill="#1f2937"/>
+  <circle cx="140" cy="240" r="15" fill="#374151"/>
+  <circle cx="260" cy="240" r="20" fill="#1f2937"/>
+  <circle cx="260" cy="240" r="15" fill="#374151"/>
+  
+  <!-- Tracks/Treads -->
+  <rect x="120" y="230" width="40" height="20" rx="10" fill="#1f2937"/>
+  <rect x="240" y="230" width="40" height="20" rx="10" fill="#1f2937"/>
+  
+  <!-- Details -->
+  <rect x="190" y="200" width="20" height="4" fill="#dc2626"/>
+  <text x="200" y="275" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#374151">JCB</text>
+</svg>
