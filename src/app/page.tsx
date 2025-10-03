@@ -264,7 +264,7 @@ export default function Home() {
             {[
               "Prayagraj City", "Naini", "Jhunsi", "Phaphamau",
               "Karchana", "Soraon", "Handia", "Meja"
-            ].map((area, index) => (
+            ].map((area, _) => (
               <div key={area} className="group bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100 hover:border-orange-300 transform hover:-translate-y-1">
                 <div className="text-2xl mb-2">📍</div>
                 <h3 className="font-bold text-gray-900 group-hover:text-orange-600 transition-colors">

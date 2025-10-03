@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { allLocations } from '@/data/locations';
-import Image from 'next/image';
 import Link from 'next/link';
 import StructuredData from '@/components/StructuredData';
 
 interface LocationPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate static params for all locations
@@ -20,7 +19,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: LocationPageProps): Promise<Metadata> {
-  const location = allLocations.find((loc) => loc.slug === params.slug);
+  const { slug } = await params;
+  const location = allLocations.find((loc) => loc.slug === slug);
   
   if (!location) {
     return {
@@ -61,8 +61,9 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   };
 }
 
-export default function LocationPage({ params }: LocationPageProps) {
-  const location = allLocations.find((loc) => loc.slug === params.slug);
+export default async function LocationPage({ params }: LocationPageProps) {
+  const { slug } = await params;
+  const location = allLocations.find((loc) => loc.slug === slug);
 
   if (!location) {
     notFound();

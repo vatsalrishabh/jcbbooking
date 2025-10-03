@@ -1,15 +1,14 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { allLocations, services } from '@/data/locations';
-import Image from 'next/image';
 import Link from 'next/link';
+import { allLocations, services } from '@/data/locations';
 import StructuredData from '@/components/StructuredData';
 
 interface ServiceLocationPageProps {
-  params: {
+  params: Promise<{
     service: string;
     location: string;
-  };
+  }>;
 }
 
 // Generate static params for all service-location combinations
@@ -30,8 +29,9 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: ServiceLocationPageProps): Promise<Metadata> {
-  const service = services.find((s) => s.slug === params.service);
-  const location = allLocations.find((l) => l.slug === params.location);
+  const { service: serviceSlug, location: locationSlug } = await params;
+  const service = services.find((s) => s.slug === serviceSlug);
+  const location = allLocations.find((l) => l.slug === locationSlug);
   
   if (!service || !location) {
     return {
@@ -72,9 +72,10 @@ export async function generateMetadata({ params }: ServiceLocationPageProps): Pr
   };
 }
 
-export default function ServiceLocationPage({ params }: ServiceLocationPageProps) {
-  const service = services.find((s) => s.slug === params.service);
-  const location = allLocations.find((l) => l.slug === params.location);
+export default async function ServiceLocationPage({ params }: ServiceLocationPageProps) {
+  const { service: serviceSlug, location: locationSlug } = await params;
+  const service = services.find((s) => s.slug === serviceSlug);
+  const location = allLocations.find((l) => l.slug === locationSlug);
 
   if (!service || !location) {
     notFound();
@@ -120,7 +121,7 @@ export default function ServiceLocationPage({ params }: ServiceLocationPageProps
     }
   };
 
-  const currentService = serviceDetails[params.service as keyof typeof serviceDetails] || serviceDetails['excavation'];
+  const currentService = serviceDetails[serviceSlug as keyof typeof serviceDetails] || serviceDetails['excavation'];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">

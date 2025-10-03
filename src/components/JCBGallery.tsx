@@ -68,7 +68,7 @@ export default function JCBGallery() {
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
 
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-20">

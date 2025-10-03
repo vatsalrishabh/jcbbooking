@@ -2,7 +2,7 @@
 
 interface StructuredDataProps {
   type?: 'organization' | 'localBusiness' | 'service' | 'article';
-  data?: any;
+  data?: Record<string, unknown>;
   location?: string;
   service?: string;
 }
